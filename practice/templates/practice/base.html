@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title>Form Tag Practice</title>
+    <link rel="stylesheet" href="{% static 'practice/css/style.css' %}">
+    </head>
+    <body>
+        <header class="header">
+        <a href="{% url 'practice:auth' %}" class="logo">
+            <span class="logo-mark">🦁</span>
+            Form Practice
+        </a>
+
+        <nav class="nav">
+            <a href="{% url 'practice:auth' %}">회원가입 / 로그인</a>
+            <a href="{% url 'practice:review' %}">상품 후기</a>
+            <a href="/admin/">Admin</a>
+        </nav>
+        </header>
+
+        <main class="container">
+        {% block content %}
+        {% endblock %}
+        </main>
+    </body>
+</html>

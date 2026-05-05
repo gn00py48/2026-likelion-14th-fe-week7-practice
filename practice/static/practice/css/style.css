@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fff9f5;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 72px;
+    padding: 0 48px;
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid #ffe1cc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FF8630;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo-mark {
+    font-size: 26px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav a {
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.nav a:hover {
+    background: #fff9f5;
+    color: #FF8630;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+.hero {
+    padding: 52px;
+    border-radius: 28px;
+    background: #FF8630;
+    color: white;
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FF8630;
+}
+
+.hero .eyebrow {
+    color: white;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.hero p {
+    margin: 0;
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: white;
+}
+
+.auth-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.auth-card,
+.review-write-section,
+.review-list-section,
+.product-section {
+    background: white;
+    border: 1px solid #f16400;
+    border-radius: 24px;
+}
+
+.auth-card {
+    padding: 32px;
+}
+
+.auth-card h2,
+.section-title h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.card-desc,
+.section-title p,
+.helper-text {
+    margin: 0;
+    color: #777;
+    line-height: 1.6;
+}
+
+.form-box,
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #FF8630;
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #FF8630;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.primary-button,
+.submit-button {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    padding: 15px 18px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.primary-button {
+    background: #FF8630;
+    color: white;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #FF8630;
+}
+
+.submit-button {
+        background: #ddd;
+        color: white;
+        cursor: not-allowed;
+}
+
+.submit-button.active {
+    background: #FF8630;
+    cursor: pointer;
+}
+
+.submit-button.active:hover {
+    background: #FF8630;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 36px;
+    padding: 32px;
+    margin-bottom: 28px;
+}
+
+.product-image-box {
+    width: 100%;
+    height: 360px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.product-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-info h1 {
+    margin: 0 0 14px;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.price {
+    margin: 0 0 18px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #FF8630;
+}
+
+.product-desc {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.tag-list span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #ffe1cc;
+    color: #FF8630;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.review-write-section,
+.review-list-section {
+    padding: 32px;
+    margin-bottom: 28px;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.review-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    padding: 18px;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    background: #fff;
+}
+
+.review-photo {
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.empty-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    color: #999;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-header strong {
+    font-size: 18px;
+}
+
+.review-header span {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #FF8630;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.review-content p {
+    margin: 0;
+    color: #444;
+    line-height: 1.7;
+}
+
+.review-content small {
+    color: #999;
+}
+
+.empty-review {
+    margin-top: 24px;
+    padding: 28px;
+    border-radius: 18px;
+    background: #fff9f5;
+    color: #777;
+    text-align: center;
+}
+
+@media (max-width: 820px) {
+    .header {
+        height: auto;
+        padding: 18px 24px;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .auth-layout,
+    .product-section,
+    .form-row,
+    .review-card {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image-box {
+        height: 260px;
+    }
+
+    .hero {
+        padding: 36px 28px;
+    }
+
+    .hero h1,
+    .product-info h1 {
+        font-size: 28px;
+    }
+}
