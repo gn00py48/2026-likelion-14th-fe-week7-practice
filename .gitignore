@@ -12,7 +12,10 @@ venv/
 # db.sqlite3
 *.sqlite3
 !db.sqlite3
-media/
+
+media/*
+!media/reviews/
+!media/reviews/*
 
 # Static collected files
 staticfiles/
