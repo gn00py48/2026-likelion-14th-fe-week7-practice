@@ -8,8 +8,10 @@ venv/
 .env
 
 # Django
-db.sqlite3
+# 정답 레포에서는 초기 DB를 포함하기 위해 db.sqlite3만 추적
+# db.sqlite3
 *.sqlite3
+!db.sqlite3
 media/
 
 # Static collected files
