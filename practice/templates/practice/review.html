@@ -57,12 +57,12 @@
             <div class="form-group">
                 <label for="star">별점</label>
                 <select id="star" name="star" required>
-                <option value="">별점을 선택해주세요</option>
-                <option value="5">⭐⭐⭐⭐⭐ 5점 킹왕짱</option>
-                <option value="4">⭐⭐⭐⭐ 4점 왕짱</option>
-                <option value="3">⭐⭐⭐ 3점 짱</option>
-                <option value="2">⭐⭐ 2점 별로에요!</option>
-                <option value="1">⭐ 1점 구려요!</option>
+                    <option value="">별점을 선택해주세요</option>
+                    <option value="5">⭐⭐⭐⭐⭐ 5점 킹왕짱</option>
+                    <option value="4">⭐⭐⭐⭐ 4점 왕짱</option>
+                    <option value="3">⭐⭐⭐ 3점 짱</option>
+                    <option value="2">⭐⭐ 2점 별로에요!</option>
+                    <option value="1">⭐ 1점 구려요!</option>
                 </select>
             </div>
             </div>
@@ -104,7 +104,7 @@
 
         <div class="review-list">
             {% for review in reviews %}
-            <article class="review-card">
+            <div class="review-card">
                 {% if review.photo %}
                 <img src="{{ review.photo.url }}" alt="후기 사진" class="review-photo">
                 {% else %}
@@ -120,7 +120,7 @@
                 <p>{{ review.content }}</p>
                 <small>{{ review.created_at|date:"Y-m-d H:i" }}</small>
                 </div>
-            </article>
+            </div>
             {% empty %}
             <div class="empty-review">
                 아직 작성된 후기가 없습니다. 첫 번째 후기를 작성해보세요!
@@ -129,7 +129,6 @@
         </div>
     </section>
 
-    <!-- JS 부분 아직 이해 못해도 됨! -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const nameInput = document.getElementById("reviewer_name");
@@ -138,22 +137,22 @@
             const reviewButton = document.getElementById("review-button");
 
             function validateReviewForm() {
-            const reviewerName = nameInput.value.trim();
-            const star = starSelect.value;
-            const content = contentTextarea.value.trim();
+                const reviewerName = nameInput.value.trim();
+                const star = starSelect.value;
+                const content = contentTextarea.value.trim();
 
-            const isValid =
-                reviewerName.length > 0 &&
-                star !== "" &&
-                content.length > 0;
+                const isValid =
+                    reviewerName.length > 0 &&
+                    star !== "" &&
+                    content.length > 0;
 
-            reviewButton.disabled = !isValid;
+                reviewButton.disabled = !isValid;
 
-            if (isValid) {
-                reviewButton.classList.add("active");
-            } else {
-                reviewButton.classList.remove("active");
-            }
+                if (isValid) {
+                    reviewButton.classList.add("active");
+                } else {
+                    reviewButton.classList.remove("active");
+                }
             }
 
             nameInput.addEventListener("input", validateReviewForm);
